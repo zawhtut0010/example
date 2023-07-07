@@ -1,0 +1,18 @@
+.course-container{
+    display: inline-flex;
+}
+
+.course-card{
+    width: 260px;
+    height: 320px;
+    margin: 10px 10px;
+    background-color: #F8F9F9;
+}
+
+.course-name{
+    text-align: center;
+}
+
+.course-button{
+    display: flex;
+}

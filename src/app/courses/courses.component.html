@@ -1,0 +1,43 @@
+<div class="">
+    <!-- <app-search 
+    (searchTextChanged) = "onSearchTextEntered($event)"
+    ></app-search> -->
+
+
+    <app-find
+    (findTextEntered) = "onFindChange($event)"
+    >
+    </app-find>
+
+    <app-filter
+        [total] = "getAllPerson()"
+        [professional] = "getProfessionalPerson()"
+        [normal] = "getNormalPerson()"
+        (filterRadioButtonSelectedChanged) = "onFilterRadionButtonChange($event)"
+    > </app-filter>
+</div>
+
+<ng-container *ngFor="let item of person">
+    <!-- personCountRadioButton==='All' || personCountRadioButton===item.type -->
+    <div class="course-container" *ngIf="findValue==='' || item.Name.toLowerCase().includes(findValue)" >
+        <div  class="course-card" >
+            <div class="">
+                <img src="{{item.img}}" alt="" style="width:220px;height:140px">
+            </div>
+    
+            <div class="course-name">
+                <h4>{{item.Name}}</h4>
+            </div>
+    
+            <div class="course-email">
+                <p>{{item.Email}}</p>
+            </div>
+    
+            <div class="course-button">
+                <button class="btn btn-outline-primary">Details</button>
+            </div>
+    
+        </div>
+    </div>
+    
+</ng-container>

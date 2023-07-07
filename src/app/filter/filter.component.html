@@ -1,0 +1,12 @@
+<div class="filter-container">
+    <span>Filter : </span>
+
+    <input type="radio" name="filter" value="All" [(ngModel)]="selectedRadioButtonValue" (change) = "onRadioButtonSelectedChange()">
+    <span>All Person( {{all}} ) </span>
+
+    <input type="radio" name="filter" value="Professional" [(ngModel)]="selectedRadioButtonValue" (change) = "onRadioButtonSelectedChange()" >
+    <span>Professional ( {{professional}} )</span>
+
+    <input type="radio" name="filter" value="Normal" [(ngModel)]="selectedRadioButtonValue" (change) = "onRadioButtonSelectedChange()" >
+    <span>Normal ( {{normal}} )</span>
+</div>
